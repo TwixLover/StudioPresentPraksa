@@ -1,0 +1,242 @@
+$MainColor: #B50014;
+$secondColor: #000000;
+html {
+    height: 100%;
+    width: 100%;
+    font-size:0;
+}
+body {
+    margin: 0;
+}
+
+.header {
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    background-color: $MainColor;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 93px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nvbar {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 200px;
+    gap: 30px;
+}
+
+.nvbar li {
+    display: inline;
+    height: 19px;
+    font-size: 16px;
+}
+
+.opntime {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: $secondColor;
+    color: white;
+    justify-content: right;
+    width: 100%;
+    height: 30px;
+}
+
+.opntime img {
+    height: 15px;
+}
+
+.nvbar img {
+    height: 20px;
+    vertical-align: middle;
+}
+
+.opText {
+    margin-right: 200px;
+    font-size: 16px;
+}
+
+.download {
+    gap: 10px;
+}
+
+.picture {
+    width: 100%;
+    height: 530px;
+    position: relative;
+}
+
+.MainLogo {
+    position: absolute;
+    top: 3%;
+    left: 19%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.MainLogo img {
+    height: 140px;
+    width: 140px;
+}
+
+.Heiko {
+    position: absolute;
+    top: 220px;
+    color: white;
+    width: 490px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    padding: 20px;
+    z-index: 2; 
+}
+
+.Heiko > h1 {
+    font-size: 38px;
+    text-align: left;
+    padding-left: 190px;
+    font-weight: 700;
+    line-height: 44.5px;
+    margin-top: 5px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.Heiko > p {
+    font-size: 16px;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    line-height: 24px;
+    padding-left: 190px;
+}
+.black {
+    display: flex;
+    flex-direction: row;
+    background-color: $secondColor;
+    height: 500px;
+    width: 100%;
+}
+.blktext{
+    color: white;
+    width: 50%;
+    font-size: large;
+    text-align: left;
+    justify-content: center;
+}
+.blktext > h2,h3,p{
+    padding-left: 360px;
+    font-family: "Roboto", sans-serif;   
+}
+
+.blktext > h2{
+    padding-top: 80px;
+    font-weight: 700;
+    font-size: 32px;
+}
+.blktext > h3{
+    font-weight: 700;
+    font-size: 22px;
+}
+.blktext > p{
+    font-size: 16px;
+    font-weight: 200;
+}
+.button {
+    background-color: $MainColor;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    outline: 1px solid white; 
+    width: 147px;
+    height: 47px;
+   
+}
+
+.buttons {
+    display: flex;
+    gap: 15px; 
+    padding-left: 390px;  
+}
+.blkpic {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align all elements in blkpic */
+    gap: 15px; /* Add gap between pictures */
+}
+
+.hus1 img {
+    margin-top:80px;
+    padding-left: 100px;
+    width: calc(3 * 130px + 2 * 5px); /* Width of 3 images plus gaps */
+    height: auto;
+}
+
+.row {
+    display: flex;
+    gap:8px; /* Add gap between pictures */
+    padding-left: 100px;
+}
+
+.row img {
+    width: 130px; /* Set the width of each image in the row */
+    height: auto;
+}
+.half{
+    display: flex;
+    flex-direction: row;
+    background-color: $secondColor;
+    height: 450px;
+    width: 100%;
+}
+.red{
+    background-color: $MainColor;
+    color: white;
+    width: 50%;
+    font-size: large;
+    text-align: left;
+    justify-content: center;
+    
+}
+.red > h2{
+    padding-top: 60px;
+    font-weight: 700;
+    font-size: 32px;
+    padding-left: 33%;
+    
+}
+.red>ul{
+    padding-left: 33%;
+    font-size: 16px;
+}
+
+.grillbutton{
+    background-color: white;
+    color: $secondColor;
+    border-radius: 25px;
+    border: none; 
+    width: 147px;
+    height: 47px;
+}
+.buttonss{
+    padding-top: 30px;
+    padding-left: 300px;
+}
+.fish {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fish img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
