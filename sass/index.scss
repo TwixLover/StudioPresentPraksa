@@ -35,7 +35,7 @@ body {
 }
 
 .nvbar li {
-    display: inline;
+    
     height: 19px;
     font-size: 16px;
 }
@@ -66,12 +66,13 @@ body {
 }
 
 .download {
-    gap: 10px;
+    display: flex;
+    gap: 5px;
 }
 
 .picture {
     width: 100%;
-    height: 530px;
+    height: 580px;
     position: relative;
 }
 
@@ -96,25 +97,29 @@ body {
     background-color: rgba(0, 0, 0, 0.3); 
     padding: 20px;
     z-index: 2; 
+    height: 298px;
 }
 
 .Heiko > h1 {
-    font-size: 38px;
+    font-size: 34px;
     text-align: left;
     padding-left: 190px;
     font-weight: 700;
     line-height: 44.5px;
     margin-top: 5px;
     font-family: "Roboto Condensed", sans-serif;
+    padding-top: 35px;
 }
 
 .Heiko > p {
     font-size: 16px;
     text-align: left;
     font-family: "Roboto", sans-serif;
-    font-weight: 200;
+    font-weight: 250;
     line-height: 24px;
     padding-left: 190px;
+    width: 275px;
+    height: 134px;
 }
 .black {
     display: flex;
@@ -164,37 +169,96 @@ body {
     gap: 15px; 
     padding-left: 390px;  
 }
+.black {
+    display: flex;
+    flex-direction: row;
+    background-color: $secondColor;
+    height: 550px;
+    width: 100%;
+}
+
+.blktext {
+    color: white;
+    width: 50%;
+    font-size: large;
+    text-align: left;
+    justify-content: center;
+}
+
+.blktext > h2, h3, p {
+    padding-left: 220px;  
+    font-family: "Roboto", sans-serif;
+}
+
+.blktext > h2 {
+    padding-top: 80px;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
+}
+
+.blktext > h3 {
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0;
+}
+
+.blktext > p {
+    font-size: 16px;
+    font-weight: 200;
+    width: 427px;
+    height: 219px;
+}
+
+.button {
+    background-color: $MainColor;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    outline: 1px solid white;
+    width: 147px;
+    height: 47px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    padding-left: 250px;  
+}
+
 .blkpic {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align all elements in blkpic */
-    gap: 15px; /* Add gap between pictures */
+    align-items: flex-start;  
+    gap: 15px;
 }
 
 .hus1 img {
-    margin-top:80px;
-    padding-left: 100px;
-    width: calc(3 * 130px + 2 * 5px); /* Width of 3 images plus gaps */
+    margin-top: 80px;
+    padding-left: 0;  
+    width: calc(3 * 135px + 2 * 5px);
     height: auto;
 }
 
 .row {
     display: flex;
-    gap:8px; /* Add gap between pictures */
-    padding-left: 100px;
+    gap: 8px;
+    padding-left: 0;  
 }
 
 .row img {
-    width: 130px; /* Set the width of each image in the row */
+    width: 135px;
     height: auto;
 }
-.half{
+
+.half {
     display: flex;
     flex-direction: row;
     background-color: $secondColor;
     height: 450px;
     width: 100%;
 }
+
 .red{
     background-color: $MainColor;
     color: white;
@@ -226,7 +290,7 @@ body {
 }
 .buttonss{
     padding-top: 30px;
-    padding-left: 300px;
+    padding-left: 280px;
 }
 .fish {
     width: 50%;
@@ -239,4 +303,58 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.Handwerk{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    background-color: $secondColor;
+    height: 1000px;
+    width: 100%;
+    color: #fff;
+}
+.Handwerk > h2{
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif; 
+    line-height: 26px;
+    margin-bottom: 0;
+    padding-top: 60px;
+}
+.Handwerk > h4{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif; 
+    line-height: 26px;
+    margin-top: 12px;
+}
+.Handwerk > p{
+    font-size: 16px;
+    font-weight: 250;
+    font-family: "Roboto", sans-serif; 
+    line-height: 24px;
+    width: 652px;
+    padding-left: 0;
+    text-align: center;
+}
+.Handwerk > .buttons{
+    padding-top: 30px;
+    padding-left:0px;
+    
+}
+.vonal{
+    padding-top: 90px;
+    padding-bottom:55px;
+}
+.meatpics{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+.meatpic{
+    height: 240px;
+    width: 240px;
 }
