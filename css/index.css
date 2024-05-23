@@ -12,12 +12,15 @@ body {
   position: relative;
 }
 
+.conatiner {
+  max-width: 1318px;
+}
+
 .navbar {
   display: flex;
   background-color: #B50014;
   flex-direction: column;
   color: white;
-  width: 100%;
   height: 93px;
   justify-content: center;
   align-items: center;
@@ -32,10 +35,12 @@ body {
   margin-left: 200px;
   gap: 30px;
 }
-
 .nvbar li {
-  height: 19px;
   font-size: 16px;
+}
+.nvbar img {
+  height: 20px;
+  vertical-align: middle;
 }
 
 .opntime {
@@ -46,16 +51,6 @@ body {
   color: white;
   justify-content: right;
   width: 100%;
-  height: 30px;
-}
-
-.opntime img {
-  height: 15px;
-}
-
-.nvbar img {
-  height: 20px;
-  vertical-align: middle;
 }
 
 .opText {
@@ -70,21 +65,15 @@ body {
 
 .picture {
   width: 100%;
-  height: 580px;
   position: relative;
 }
 
 .MainLogo {
   position: absolute;
-  top: 3%;
+  top: 0.2%;
   left: 19%;
   transform: translateX(-50%);
   z-index: 1;
-}
-
-.MainLogo img {
-  height: 140px;
-  width: 140px;
 }
 
 .Heiko {
@@ -95,9 +84,7 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 20px;
   z-index: 2;
-  height: 298px;
 }
-
 .Heiko > h1 {
   font-size: 34px;
   text-align: left;
@@ -108,7 +95,6 @@ body {
   font-family: "Roboto Condensed", sans-serif;
   padding-top: 35px;
 }
-
 .Heiko > p {
   font-size: 16px;
   text-align: left;
@@ -135,23 +121,19 @@ body {
   text-align: left;
   justify-content: center;
 }
-
-.blktext > h2, h3, p {
+.blktext > h2, .blktext h3, .blktext p {
   padding-left: 360px;
   font-family: "Roboto", sans-serif;
 }
-
 .blktext > h2 {
   padding-top: 80px;
   font-weight: 700;
   font-size: 32px;
 }
-
 .blktext > h3 {
   font-weight: 700;
   font-size: 22px;
 }
-
 .blktext > p {
   font-size: 16px;
   font-weight: 200;
@@ -188,25 +170,21 @@ body {
   text-align: left;
   justify-content: center;
 }
-
-.blktext > h2, h3, p {
+.blktext > h2, .blktext h3, .blktext p {
   padding-left: 220px;
   font-family: "Roboto", sans-serif;
 }
-
 .blktext > h2 {
   padding-top: 80px;
   font-weight: 700;
   font-size: 32px;
   margin: 0;
 }
-
 .blktext > h3 {
   font-weight: 700;
   font-size: 22px;
   margin: 0;
 }
-
 .blktext > p {
   font-size: 16px;
   font-weight: 200;
@@ -249,7 +227,6 @@ body {
   gap: 8px;
   padding-left: 0;
 }
-
 .row img {
   width: 135px;
   height: auto;
@@ -271,14 +248,12 @@ body {
   text-align: left;
   justify-content: center;
 }
-
 .red > h2 {
   padding-top: 60px;
   font-weight: 700;
   font-size: 32px;
   padding-left: 33%;
 }
-
 .red > ul {
   padding-left: 33%;
   font-size: 16px;
@@ -304,7 +279,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .fish img {
   width: 100%;
   height: 100%;
@@ -320,7 +294,6 @@ body {
   width: 100%;
   color: #fff;
 }
-
 .Handwerk > h2 {
   font-size: 32px;
   font-weight: 700;
@@ -329,7 +302,6 @@ body {
   margin-bottom: 0;
   padding-top: 60px;
 }
-
 .Handwerk > h4 {
   font-size: 22px;
   font-weight: 700;
@@ -337,7 +309,6 @@ body {
   line-height: 26px;
   margin-top: 12px;
 }
-
 .Handwerk > p {
   font-size: 16px;
   font-weight: 250;
@@ -347,7 +318,13 @@ body {
   padding-left: 0;
   text-align: center;
 }
-
+.Handwerk > h4 {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  line-height: 26px;
+  margin-top: 12px;
+}
 .Handwerk > .buttons {
   padding-top: 30px;
   padding-left: 0px;
@@ -365,7 +342,6 @@ body {
   gap: 15px;
 }
 
-.meatpic {
-  height: 240px;
-  width: 240px;
+.conatiner {
+  max-width: 1318px;
 }
