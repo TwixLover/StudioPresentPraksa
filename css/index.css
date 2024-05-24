@@ -14,6 +14,7 @@ body {
 
 .conatiner {
   max-width: 1318px;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -112,31 +113,6 @@ body {
   background-color: #000000;
   height: 500px;
   width: 100%;
-}
-
-.blktext {
-  color: white;
-  width: 50%;
-  font-size: large;
-  text-align: left;
-  justify-content: center;
-}
-.blktext > h2, .blktext h3, .blktext p {
-  padding-left: 360px;
-  font-family: "Roboto", sans-serif;
-}
-.blktext > h2 {
-  padding-top: 80px;
-  font-weight: 700;
-  font-size: 32px;
-}
-.blktext > h3 {
-  font-weight: 700;
-  font-size: 22px;
-}
-.blktext > p {
-  font-size: 16px;
-  font-weight: 200;
 }
 
 .button {
@@ -254,7 +230,7 @@ body {
   font-size: 32px;
   padding-left: 33%;
 }
-.red > ul {
+.red > li {
   padding-left: 33%;
   font-size: 16px;
 }
@@ -290,7 +266,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #000000;
-  height: 1000px;
+  height: 1186px;
   width: 100%;
   color: #fff;
 }
@@ -318,13 +294,6 @@ body {
   padding-left: 0;
   text-align: center;
 }
-.Handwerk > h4 {
-  font-size: 22px;
-  font-weight: 700;
-  font-family: "Roboto", sans-serif;
-  line-height: 26px;
-  margin-top: 12px;
-}
 .Handwerk > .buttons {
   padding-top: 30px;
   padding-left: 0px;
@@ -342,6 +311,98 @@ body {
   gap: 15px;
 }
 
-.conatiner {
-  max-width: 1318px;
+.spices {
+  display: flex;
+  flex-direction: row;
+  height: 705px;
+  width: 100%;
+}
+.spices .spicered {
+  flex: 1;
+  background-color: #B50014;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.spices .spicered > .spicered_h2 {
+  margin-left: 124px;
+  padding-top: 180px;
+  text-align: start;
+}
+.spices .spicered > .spicered_h2 h2 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  line-height: 42px;
+  margin-bottom: 0;
+}
+.spices .spicered > .spicered_h4 {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  margin-left: 124px;
+  text-align: start;
+}
+.spices .spicered > .spicered_h4 h4 {
+  margin-top: 0px;
+}
+.spices .spicered > .spicered_body {
+  font-size: 16px;
+  font-weight: 250;
+  font-family: "Roboto", sans-serif;
+  line-height: 24px;
+  width: 431px;
+  padding-left: 0;
+  margin-left: 124px;
+  text-align: start;
+}
+.spices .spicespic {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.spices .spicespic img {
+  width: 100%;
+  height: 100%;
+}
+
+.transp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.transp .fleischversand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.transp .fleischversand h2 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  line-height: 42px;
+  margin-bottom: 0;
+  color: #fff;
+}
+.transp .fleischversand button {
+  background-color: white;
+  color: #000000;
+  border-radius: 25px;
+  border: 1px solid red;
+  width: 204px;
+  height: 47px;
+  gap: 0px;
+  opacity: 0px;
 }
