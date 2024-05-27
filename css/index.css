@@ -6,13 +6,14 @@ html {
 
 body {
   margin: 0;
+  background-color: #000000;
 }
 
 .header {
   position: relative;
 }
 
-.conatiner {
+.container {
   max-width: 1318px;
   margin: 0 auto;
 }
@@ -52,6 +53,16 @@ body {
   color: white;
   justify-content: right;
   width: 100%;
+  padding-top: 5.5px;
+  padding-bottom: 5.5px;
+  font-weight: 400;
+}
+.opntime strong {
+  font-weight: 700;
+}
+
+button:hover, li:hover {
+  cursor: pointer;
 }
 
 .opText {
@@ -128,7 +139,6 @@ body {
 .buttons {
   display: flex;
   gap: 15px;
-  padding-left: 390px;
 }
 
 .black {
@@ -147,7 +157,6 @@ body {
   justify-content: center;
 }
 .blktext > h2, .blktext h3, .blktext p {
-  padding-left: 220px;
   font-family: "Roboto", sans-serif;
 }
 .blktext > h2 {
@@ -181,7 +190,7 @@ body {
 .buttons {
   display: flex;
   gap: 15px;
-  padding-left: 250px;
+  align-items: flex-start;
 }
 
 .blkpic {
@@ -212,7 +221,6 @@ body {
   display: flex;
   flex-direction: row;
   background-color: #000000;
-  height: 450px;
   width: 100%;
 }
 
@@ -225,7 +233,7 @@ body {
   justify-content: center;
 }
 .red > h2 {
-  padding-top: 60px;
+  padding-top: 90px;
   font-weight: 700;
   font-size: 32px;
   padding-left: 33%;
@@ -377,6 +385,8 @@ body {
   align-items: center;
   position: relative;
   background-color: rgba(0, 0, 0, 0.85);
+  z-index: 2;
+  min-height: 340px;
 }
 .transp .fleischversand {
   position: absolute;
@@ -405,4 +415,13 @@ body {
   height: 47px;
   gap: 0px;
   opacity: 0px;
+}
+.transp > .parallax {
+  height: 100%;
+  width: 100%;
+  background-image: url("/Pictures/fleischversand.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
