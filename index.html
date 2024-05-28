@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 <body>
  
@@ -131,5 +133,126 @@
         </div>
     </div>
 </div>
+<div class="genussnetz">
+    <div class="container">
+        <div class="genuss_row">
+            <div class="genussnetz_pic">
+                <img src="Pictures/genussnetz logo 1.png" alt="genussnetz logo">
+            </div>
+            <div class="genussnetz_text">
+                <h2>Metzgerei Brath ist Mitglied<br>
+                im Genussnetzwerk</h2>
+                <button class="button">Gehen zu site</button>
+            </div>
+        </div>
+        <div class="genuss_column">
+            <img src="Pictures/vonal 1.png" alt="vonal" class="vonal">
+        </div>
+    </div>
+</div>
+<div class="medals">
+    <div class="container">
+    <div class="medals_row">
+        <h2>Auszeichnungen</h2>
+        <div class="special">
+            <img src="Pictures/nagrada1.png" alt="medal 1">
+            <p>Tollit argumentum genau<br>
+                Saepe lobortis</p>
+        </div>
+        <div class="genuine">
+            <img src="Pictures/nagrada2.png" alt="medal 2">
+            <p>Schneewittchen<br>
+                denique</p>
+        </div>
+        <div class="best">
+            <img src="Pictures/nagrada3.png" alt="medal 3">
+            <p>Grimms Märchen <br>
+                expetenda</p>
+        </div>
+        <div class="quality">
+            <img src="Pictures/nagrada4.png" alt="medal 4">
+            <p>Mettwurst mei <br>
+                ullum gloriatur.</p>
+        </div>
+    </div>
+
+        <div class="genuss_column">
+            <img src="Pictures/vonal 1.png" alt="vonal" class="vonal">
+        </div>
+    </div>
+</div>
+
+<!--Didn't finished yet-->
+<div class="cards">
+    <div class="container">
+    <div class="cards_column">
+    <p>Empfehlungs</p>
+    <h2>Was die Leute über uns sagen</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide1">
+                        <img src="Pictures/grillkurs_icon.png" alt="grillkurs icon" id="grillkurs_icon">
+                        <img src="Pictures/zvezdice.png" alt="Stars" id="stars">
+                    </div>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="footer_row">
+            <div class="infoess">
+                <div class="icons">
+                <p class="lnr lnr-map-marker"></p>
+                <p class="lnr lnr-phone"></p>
+                <p class="lnr lnr-envelope"></p>
+            </div>
+            <div class="infos">
+             <p>  Klauprechtstraße  25 <br>76137 Karlsruhe, Germany</p></span>
+            <p class="tel"><a href="tel:+49 721 358060">+49 721 358060</a></p>
+            <p class="mail"><a href="mailto:info@partyservice-brath.de"><br>info@partyservice-brath.de</a></p>
+        </div>
+        </div>
+        <div class="footer_logo">
+        <img src="Pictures/Group.png" alt="">
+    </div>
+    <div class="socialmedia">
+        <p>Besuchen Sie uns auf:</p>
+        <img src="Pictures/Group 628.png">
+    </div>
+        </div>
+        
+        <div class="footer_column">
+            <div class="column_row">
+                <p class="allrights">© 2020 by Metzgerei Heiko Brath  GmbH, Deutschland</p>
+                <p class="coded">Code and design by <a href="https://www.studiopresent.rs/"><i>StudioPresent</i></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  
 </body>
 </html>
