@@ -24,6 +24,7 @@
                 <li>Tagesesse</li>
                 <li>Impressum</li>
                 <li>Kontakt</li>
+                
                 <div class="download">
                     <li><img src="Pictures/pdf.png" alt="Logo"></li>
                     <li>Download</li>
@@ -32,6 +33,7 @@
         </div>
     </div>
         <div class="opntime">
+            <button onclick="changeBackgroundColor()">Light Mode</button>
             <span class="opText"> <img src="Pictures/clock.png" alt="Logo"> <strong>Opentime:</strong> Di.-Fr.: 07:00-13:00 und 15.00-18,30. Sa.: 07.30-12.30</span>
         </div>
         <div class="pic">
@@ -192,16 +194,40 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="slide1">
-                        <img src="Pictures/grillkurs_icon.png" alt="grillkurs icon" id="grillkurs_icon">
-                        <img src="Pictures/zvezdice.png" alt="Stars" id="stars">
+                        <p class="slide1_body">Sprechen Sie deutsch aliquip ex ea commodo consequat. 
+                            Wiener Schnitzel aute irure dolor in reprehenderit Guten Tag mollit anim Stuttgart.</p>
+                            <p class="Maria">Maria Kartofeln</p>
                     </div>
                 </div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">
+                    <div class="slide2">
+                    <img src="Pictures/grillkurs_icon.png" alt="grillkurs icon" id="grillkurs_icon">
+                    <img src="Pictures/zvezdice.png" alt="Stars" id="stars">
+                    <p class="card_body">Wiener Schnitzel amet, consectetur Handtasche elit, sed do eiusmod tempor Stuttgart ut labore et dolore magna 
+                         Luftballons Ut Turnbeutel nostrud exercitation ullamco .</p>
+                         <div class="TobiasK">
+                         <p class="Tobias">Halling Tobias</p>
+                         <p class="Koch">Koch</p>
+                        </div>
+                      
+                </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide1">
+                        <p class="slide1_body">Achtung fur atine indoctum complectitur HugoClub Mate mea meliore denique nominavi id.
+                             Ohrwurm expetenda nam an, his ei Reise euismod assentior.</p>
+                            <p class="Maria">Rene Weinstein</p>
+                    </div>
+                    <div class="lnr lnr-arrow-right-circle">123</div>
+                    <div class="lnr lnr-arrow-left-circle"></div>
+                </div>
+
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+
         </div>
+        <div class="card_button">
+        <button class="button">Alle Berichte</button>
+    </div>
     </div>
 </div>
 </div>
@@ -237,7 +263,14 @@
         </div>
     </div>
 </div>
-
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="popup-close" onclick="closePopup()">×</span>
+        <h2>Buy some Fleisch!</h2>
+        <p>Enjoy our content</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
 
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -246,13 +279,60 @@
       slidesPerView: 3,
       spaceBetween: 30,
       centeredSlides: true,
-      loop: true,
+      loop: false,
+      initialSlide: 1, 
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.lnr lnr-arrow-right-circle',
+        prevEl: '.lnr lnr-arrow-left-circle',
       },
     });
-  </script>
-  
+    
+    function changeBackgroundColor() {
+    let bodyBackgroundColor = window.getComputedStyle(document.body).getPropertyValue('background-color');
+    if (bodyBackgroundColor === 'rgb(0, 0, 0)') {
+        document.body.style.backgroundColor = 'lightgray'; 
+    } else {
+        document.body.style.backgroundColor = ''; 
+    }
+
+    let divs = document.getElementsByTagName('div');
+    for (let i = 0; i < divs.length; i++) {
+        let div = divs[i];
+        let computedStyle = window.getComputedStyle(div);
+        let backgroundColor = computedStyle.getPropertyValue('background-color');
+        let color = computedStyle.getPropertyValue('color');
+        if (backgroundColor === 'rgb(0, 0, 0)' || backgroundColor === 'var(--SecondColor)') {
+            div.style.backgroundColor = 'lightgray'; 
+        } else {
+            div.style.backgroundColor = ''; 
+        }
+        if (color === 'rgb(255, 255, 255)') {
+            div.style.color = 'black'; 
+        } else {
+            div.style.color = ''; 
+        }
+    }
+}
+
+let popup = document.getElementById('popup');
+let scrolled = false;
+
+window.addEventListener('scroll', function() {
+    scrolled = true;
+});
+
+setTimeout(function() {
+    if (scrolled) {
+        popup.style.display = 'block';
+        document.body.style.overflow = 'hidden'; 
+    }
+}, 8000); 
+
+function closePopup() {
+    popup.style.display = 'none';
+    document.body.style.overflow = 'auto'; 
+}
+
+</script>
 </body>
 </html>

@@ -563,17 +563,27 @@ button:hover, li:hover{
     height: 820px;
     padding-top: 130px;
 
-    &>.container{
+    
+    .container{
+        
    .cards_column{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        .card_button
+        {
+            padding-top: 90px;
+            align-items: center;
+        }
+        
     h2{
-        font-size: 32px;
+                font-size: 32px;
                 font-weight: 700;
                 font-family: "Roboto", sans-serif;
                 line-height: 42px;
                 margin-bottom: 20px;
+                margin-top: 5px;
                 color: #fff;
     }
     p {
@@ -590,40 +600,122 @@ button:hover, li:hover{
 .swiper-container {
     width: 100%;
     height: 100%;
+    padding-top: 75px;
 
     .swiper-wrapper {
-        gap: 16px;
+        display: flex;
+        justify-content: center;
+        gap: 35px;
     }
 }
 
-.swiper-slide-active {
-    transform: scale(1.2);
-    background-color: #fff; 
-    opacity: 69.9%; 
-
-}
 
 .swiper-slide {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     font-size: 18px;
-    background: #fff;
-    transition: transform 0.3s, background-color 0.3s;
-    opacity: 29.9%; 
-   
+    background: #1b1b1b;
+    transition: transform 0.3s;
+    width: 300px;
+    height: 350px;
 
-    .slide1 {
+
+    .slide1{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        
+
+        p{
+            font-family: "Roboto", sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 18px;
+            text-align: center;
+            color:#FFf
+
+        }
+        .slide1_body{
+            display: flex;  
+            width: 249px;
+            height: 73px;
+        }
+        .Maria{
+            opacity: 46%;
+            p{
+            font-family: Roboto;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.06px;
+            text-align: center;
+
+        }}
+    }
+    .slide2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        #grillkurs_icon{
+            padding-top: 50px;
+        }
         #stars{
-            opacity: 100%;
-            z-index: -5;
+            padding-top: 14px;
+        }
+        p{
+            font-family: "Roboto", sans-serif;
+            
+        }
+        .card_body{
+            
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            text-align: center;
+            color:#FFf;
+            width: 342px;
+            height: 100px;
+
+        }
+        .TobiasK{
+            padding-bottom: 20px;
+         .Tobias{
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.75px;
+            text-align: left;
+            color: #FFf;
+
+
+         }
+         .Koch{
+            margin-top: 0;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 18.75px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            color: #FFf;
+
+
+         }
         }
         
     }
     
+}
+.swiper-slide-active {
+    transform: scale(1.2);
+    background-color: #2a2a2a; 
+    height:414px;
+    width: 400px;
+
 }
 }
 }
@@ -648,6 +740,7 @@ button:hover, li:hover{
             flex-direction: row;
             align-items: center;
             gap:16px;
+            align-items: end;
             p{
                 font-family: "Roboto", sans-serif;
                 font-size: 16px;
@@ -667,7 +760,7 @@ button:hover, li:hover{
           &>.footer_logo{
            display: flex;
            padding-top: 7px;
-           padding-left: 160px;
+           padding-left: 165px;
           }
 
           .infoess{
@@ -736,11 +829,52 @@ button:hover, li:hover{
                         
                     }
                 }
-                
-
             }
         }
     }
 }
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+
+    .popup-content {
+        text-align: center;
+    }
+    .popup-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 24px;
+    }
+    
+}
+
+.popup h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.popup button {
+    background-color: #B50014;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #8E0010;
+}
+
 
 
