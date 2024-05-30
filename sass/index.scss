@@ -16,7 +16,7 @@ body {
     max-width: 1318px;
     margin: 0 auto;
 }
-.navbar {
+  .navbar {
     display: flex;
     background-color: $MainColor;
     flex-direction: column;
@@ -24,8 +24,15 @@ body {
     height: 93px;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 600px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 }
-.nvbar {
+
+.navbar .nvbar {
     display: flex;
     gap: 15px;
     list-style-type: none;
@@ -34,12 +41,88 @@ body {
     margin-left: 200px;
     gap: 30px;
 
-    li{
+    li {
         font-size: 16px;
     }
-    img{
+
+    img {
         height: 20px;
         vertical-align: middle;
+    }
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.hamburger-menu {
+    display: none;
+
+    @media (max-width: 600px) {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+
+
+        .hamburger-icon {
+            width: 30px;
+            height: 20px;
+            background-color:$MainColor;
+
+            &::before, &::after {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 4px;
+                background-color: white;
+                margin: 6px 0;
+            }
+        }
+    }
+}
+
+.menu {
+    display: flex;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    display: none;
+
+    @media (max-width: 600px) {
+        display: block;
+        top: 115%;
+        position: relative;
+
+        &.hidden {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: $MainColor;
+
+
+            li {
+                top: 30%;
+                padding: 10px;
+                background-color: red;
+                color: white;
+                text-align: center;
+                width: 110px;
+                font-size: 15px;
+                height: 100%;
+                position: relative;
+                z-index: 8000;
+            }
+        }
     }
 }
 .opntime {
@@ -55,6 +138,15 @@ body {
     font-weight: 400;
     strong{
         font-weight: 700;
+    }
+    .lightmode{
+        background-color: $MainColor;
+        color: #fff;
+        border-radius: 25px;
+        border: none;
+        outline: 1px solid white; 
+        position: relative;
+        right:5%;
     }
  
 
@@ -87,9 +179,10 @@ button:hover, li:hover{
 
 }
 
+
 .Heiko {
     position: absolute;
-    top: 220px;
+    top: 95px;
     color: white;
     width: 490px;
     background-color: rgba(0, 0, 0, 0.3); 
@@ -117,7 +210,55 @@ button:hover, li:hover{
         height: 134px;
     }
 }
+.pic {
+    position: relative;
+    .swiper-container-unique {
+      .swiper-pagination-unique {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          margin: 0 5px;
+          background-color: white;
+          border: 2px solid transparent;
+          border-radius: 50%;
+          opacity: 1;
+          &-active {
+            background-color: red;
+            border-color: white;
+          }
+        }
+      }
+      .swiper-button-prev-unique,
+      .swiper-button-next-unique {
+        color: white;
+        position: absolute;
+        top: 90%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 3;
+      }
+    }
+  }
+  
 
+.swiper-button-prev-unique {
+    left: 44.5%;
+    scale: 1.2;
+}
+
+.swiper-button-next-unique {
+    right: 44.5%;
+    scale: 1.2;
+}
 .black {
     display: flex;
     flex-direction: row;
@@ -557,168 +698,193 @@ button:hover, li:hover{
     }
 }
 
-//cards are not finished yet
-.cards{
+
+.cards {
     width: 100%;
     height: 820px;
     padding-top: 130px;
+}
 
-    
-    .container{
-        
-   .cards_column{
+.container {
+    .cards_column {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .card_button
-        {
+
+        .card_button {
             padding-top: 90px;
             align-items: center;
         }
-        
-    h2{
-                font-size: 32px;
-                font-weight: 700;
-                font-family: "Roboto", sans-serif;
-                line-height: 42px;
-                margin-bottom: 20px;
-                margin-top: 5px;
-                color: #fff;
-    }
-    p {
-        font-family: "Roboto", sans-serif;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 18.75px;
-        text-align: center;
-        color:#FFFFFF82
 
-        
-    }
-}
-.swiper-container {
-    width: 100%;
-    height: 100%;
-    padding-top: 75px;
-
-    .swiper-wrapper {
-        display: flex;
-        justify-content: center;
-        gap: 35px;
-    }
-}
-
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-size: 18px;
-    background: #1b1b1b;
-    transition: transform 0.3s;
-    width: 300px;
-    height: 350px;
-
-
-    .slide1{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-
-        p{
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
             font-family: "Roboto", sans-serif;
-            font-size: 12px;
-            font-weight: 300;
-            line-height: 18px;
-            text-align: center;
-            color:#FFf
-
+            line-height: 42px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            color: #fff;
         }
-        .slide1_body{
-            display: flex;  
-            width: 249px;
-            height: 73px;
-        }
-        .Maria{
-            opacity: 46%;
-            p{
-            font-family: Roboto;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 14.06px;
-            text-align: center;
 
-        }}
-    }
-    .slide2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-
-        #grillkurs_icon{
-            padding-top: 50px;
-        }
-        #stars{
-            padding-top: 14px;
-        }
-        p{
+        p {
             font-family: "Roboto", sans-serif;
-            
-        }
-        .card_body{
-            
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 24px;
-            text-align: center;
-            color:#FFf;
-            width: 342px;
-            height: 100px;
-
-        }
-        .TobiasK{
-            padding-bottom: 20px;
-         .Tobias{
-            font-family: "Roboto", sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 18.75px;
-            text-align: left;
-            color: #FFf;
-
-
-         }
-         .Koch{
-            margin-top: 0;
             font-size: 16px;
             font-weight: 300;
             line-height: 18.75px;
             text-align: center;
-            font-family: "Roboto", sans-serif;
-            color: #FFf;
-
-
-         }
+            color: #FFFFFF82;
         }
-        
     }
-    
-}
-.swiper-slide-active {
-    transform: scale(1.2);
-    background-color: #2a2a2a; 
-    height:414px;
-    width: 400px;
 
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        padding-top: 75px;
+        position: relative;
+
+        .swiper-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px;
+            background: #1b1b1b;
+            transition: transform 0.3s;
+            width: 300px;
+            height: 350px;
+            position: relative;
+            z-index: 1;
+
+            .quote{
+                position: relative;
+                top:100%;
+                left: 40%;
+            }
+
+            .slide1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    font-family: "Roboto", sans-serif;
+                    font-size: 12px;
+                    font-weight: 300;
+                    line-height: 18px;
+                    text-align: center;
+                    color: #FFF;
+                }
+
+                .slide1_body {
+                    display: flex;
+                    width: 249px;
+                    height: 73px;
+                }
+
+                .Maria {
+                    opacity: 46%;
+
+                    p {
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 14.06px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .slide2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                #grillkurs_icon {
+                    padding-top: 50px;
+                }
+
+                #stars {
+                    padding-top: 14px;
+                }
+
+                p {
+                    font-family: "Roboto", sans-serif;
+                }
+
+                .card_body {
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 24px;
+                    text-align: center;
+                    color: #FFF;
+                    width: 342px;
+                    height: 100px;
+                }
+
+                .TobiasK {
+                    padding-bottom: 20px;
+
+                    .Tobias {
+                        font-family: "Roboto", sans-serif;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 18.75px;
+                        text-align: left;
+                        color: #FFF;
+                    }
+
+                    .Koch {
+                        margin-top: 0;
+                        font-size: 16px;
+                        font-weight: 300;
+                        line-height: 18.75px;
+                        text-align: center;
+                        font-family: "Roboto", sans-serif;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+
+        .swiper-slide-active {
+            transform: scale(1.2);
+            background-color: #2a2a2a;
+            height: 414px;
+            width: 400px;
+            z-index: 2; 
+        }
+
+        .lnr-arrow-left-circle, .lnr-arrow-right-circle {
+            color: white;
+            position: absolute;
+            top: 47%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 3; 
+        }
+
+        .lnr-arrow-left-circle {
+            left: -6%;
+            scale: 1.5;
+        }
+
+        .lnr-arrow-right-circle {
+            right: -6%;
+            scale: 1.5;
+        }
+    }
 }
-}
-}
+
 .footer {
     width: 100%;
     background-color: $MainColor;
@@ -875,6 +1041,5 @@ button:hover, li:hover{
 .popup button:hover {
     background-color: #8E0010;
 }
-
 
 

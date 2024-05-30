@@ -27,8 +27,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
-.nvbar {
+.navbar .nvbar {
   display: flex;
   gap: 15px;
   list-style-type: none;
@@ -37,12 +44,84 @@ body {
   margin-left: 200px;
   gap: 30px;
 }
-.nvbar li {
+.navbar .nvbar li {
   font-size: 16px;
 }
-.nvbar img {
+.navbar .nvbar img {
   height: 20px;
   vertical-align: middle;
+}
+@media (max-width: 600px) {
+  .navbar .nvbar {
+    display: none;
+  }
+}
+
+.hamburger-menu {
+  display: none;
+}
+@media (max-width: 600px) {
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .hamburger-menu .hamburger-icon {
+    width: 30px;
+    height: 20px;
+    background-color: #B50014;
+  }
+  .hamburger-menu .hamburger-icon::before, .hamburger-menu .hamburger-icon::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+  }
+}
+
+.menu {
+  display: flex;
+}
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+@media (max-width: 600px) {
+  .mobile-menu {
+    display: block;
+    top: 115%;
+    position: relative;
+  }
+  .mobile-menu.hidden {
+    display: none;
+  }
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #B50014;
+  }
+  .mobile-menu ul li {
+    top: 30%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    width: 110px;
+    font-size: 15px;
+    height: 100%;
+    position: relative;
+    z-index: 8000;
+  }
 }
 
 .opntime {
@@ -59,6 +138,15 @@ body {
 }
 .opntime strong {
   font-weight: 700;
+}
+.opntime .lightmode {
+  background-color: #B50014;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  outline: 1px solid white;
+  position: relative;
+  right: 5%;
 }
 
 button:hover, li:hover {
@@ -90,7 +178,7 @@ button:hover, li:hover {
 
 .Heiko {
   position: absolute;
-  top: 220px;
+  top: 95px;
   color: white;
   width: 490px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -116,6 +204,53 @@ button:hover, li:hover {
   padding-left: 190px;
   width: 275px;
   height: 134px;
+}
+
+.pic {
+  position: relative;
+}
+.pic .swiper-container-unique .swiper-pagination-unique {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.pic .swiper-container-unique .swiper-pagination-unique .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: white;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  opacity: 1;
+}
+.pic .swiper-container-unique .swiper-pagination-unique .swiper-pagination-bullet-active {
+  background-color: red;
+  border-color: white;
+}
+.pic .swiper-container-unique .swiper-button-prev-unique,
+.pic .swiper-container-unique .swiper-button-next-unique {
+  color: white;
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.swiper-button-prev-unique {
+  left: 44.5%;
+  scale: 1.2;
+}
+
+.swiper-button-next-unique {
+  right: 44.5%;
+  scale: 1.2;
 }
 
 .black {
@@ -532,17 +667,18 @@ button:hover, li:hover {
   height: 820px;
   padding-top: 130px;
 }
-.cards .container .cards_column {
+
+.container .cards_column {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.cards .container .cards_column .card_button {
+.container .cards_column .card_button {
   padding-top: 90px;
   align-items: center;
 }
-.cards .container .cards_column h2 {
+.container .cards_column h2 {
   font-size: 32px;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
@@ -551,7 +687,7 @@ button:hover, li:hover {
   margin-top: 5px;
   color: #fff;
 }
-.cards .container .cards_column p {
+.container .cards_column p {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -559,17 +695,18 @@ button:hover, li:hover {
   text-align: center;
   color: rgba(255, 255, 255, 0.5098039216);
 }
-.cards .container .swiper-container {
+.container .swiper-container {
   width: 100%;
   height: 100%;
   padding-top: 75px;
+  position: relative;
 }
-.cards .container .swiper-container .swiper-wrapper {
+.container .swiper-container .swiper-wrapper {
   display: flex;
   justify-content: center;
   gap: 35px;
 }
-.cards .container .swiper-slide {
+.container .swiper-container .swiper-slide {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -579,85 +716,110 @@ button:hover, li:hover {
   transition: transform 0.3s;
   width: 300px;
   height: 350px;
+  position: relative;
+  z-index: 1;
 }
-.cards .container .swiper-slide .slide1 {
+.container .swiper-container .swiper-slide .quote {
+  position: relative;
+  top: 100%;
+  left: 40%;
+}
+.container .swiper-container .swiper-slide .slide1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.cards .container .swiper-slide .slide1 p {
+.container .swiper-container .swiper-slide .slide1 p {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 300;
   line-height: 18px;
   text-align: center;
-  color: #FFf;
+  color: #FFF;
 }
-.cards .container .swiper-slide .slide1 .slide1_body {
+.container .swiper-container .swiper-slide .slide1 .slide1_body {
   display: flex;
   width: 249px;
   height: 73px;
 }
-.cards .container .swiper-slide .slide1 .Maria {
+.container .swiper-container .swiper-slide .slide1 .Maria {
   opacity: 46%;
 }
-.cards .container .swiper-slide .slide1 .Maria p {
+.container .swiper-container .swiper-slide .slide1 .Maria p {
   font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
   line-height: 14.06px;
   text-align: center;
 }
-.cards .container .swiper-slide .slide2 {
+.container .swiper-container .swiper-slide .slide2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.cards .container .swiper-slide .slide2 #grillkurs_icon {
+.container .swiper-container .swiper-slide .slide2 #grillkurs_icon {
   padding-top: 50px;
 }
-.cards .container .swiper-slide .slide2 #stars {
+.container .swiper-container .swiper-slide .slide2 #stars {
   padding-top: 14px;
 }
-.cards .container .swiper-slide .slide2 p {
+.container .swiper-container .swiper-slide .slide2 p {
   font-family: "Roboto", sans-serif;
 }
-.cards .container .swiper-slide .slide2 .card_body {
+.container .swiper-container .swiper-slide .slide2 .card_body {
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
   text-align: center;
-  color: #FFf;
+  color: #FFF;
   width: 342px;
   height: 100px;
 }
-.cards .container .swiper-slide .slide2 .TobiasK {
+.container .swiper-container .swiper-slide .slide2 .TobiasK {
   padding-bottom: 20px;
 }
-.cards .container .swiper-slide .slide2 .TobiasK .Tobias {
+.container .swiper-container .swiper-slide .slide2 .TobiasK .Tobias {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18.75px;
   text-align: left;
-  color: #FFf;
+  color: #FFF;
 }
-.cards .container .swiper-slide .slide2 .TobiasK .Koch {
+.container .swiper-container .swiper-slide .slide2 .TobiasK .Koch {
   margin-top: 0;
   font-size: 16px;
   font-weight: 300;
   line-height: 18.75px;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  color: #FFf;
+  color: #FFF;
 }
-.cards .container .swiper-slide-active {
+.container .swiper-container .swiper-slide-active {
   transform: scale(1.2);
   background-color: #2a2a2a;
   height: 414px;
   width: 400px;
+  z-index: 2;
+}
+.container .swiper-container .lnr-arrow-left-circle, .container .swiper-container .lnr-arrow-right-circle {
+  color: white;
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3;
+}
+.container .swiper-container .lnr-arrow-left-circle {
+  left: -6%;
+  scale: 1.5;
+}
+.container .swiper-container .lnr-arrow-right-circle {
+  right: -6%;
+  scale: 1.5;
 }
 
 .footer {
