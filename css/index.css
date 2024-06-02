@@ -17,6 +17,16 @@ body {
   max-width: 1318px;
   margin: 0 auto;
 }
+@media (max-width: 600px) {
+  .container {
+    max-width: 600px;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    max-width: 412px;
+  }
+}
 
 .navbar {
   display: flex;
@@ -70,6 +80,8 @@ body {
     width: 30px;
     height: 20px;
     background-color: #B50014;
+    position: relative;
+    left: 400%;
   }
   .hamburger-menu .hamburger-icon::before, .hamburger-menu .hamburger-icon::after {
     content: "";
@@ -98,6 +110,7 @@ body {
     display: block;
     top: 115%;
     position: relative;
+    left: 25%;
   }
   .mobile-menu.hidden {
     display: none;
@@ -148,6 +161,16 @@ body {
   position: relative;
   right: 5%;
 }
+@media (max-width: 600px) {
+  .opntime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-top: 0;
+  }
+}
 
 button:hover, li:hover {
   cursor: pointer;
@@ -156,6 +179,28 @@ button:hover, li:hover {
 .opText {
   margin-right: 200px;
   font-size: 16px;
+}
+@media (max-width: 600px) {
+  .opText {
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 11.72px;
+    flex-direction: column;
+    max-height: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .opText img {
+    scale: 0.8;
+    position: absolute;
+    top: 10%;
+    z-index: 500;
+    left: 29%;
+  }
 }
 
 .download {
@@ -167,13 +212,27 @@ button:hover, li:hover {
   width: 100%;
   position: relative;
 }
+@media (max-width: 600px) {
+  .picture {
+    width: 100%;
+    height: 250px;
+  }
+}
 
 .MainLogo {
   position: absolute;
   top: 0.2%;
-  left: 19%;
+  left: 15%;
   transform: translateX(-50%);
   z-index: 1;
+}
+@media (max-width: 600px) {
+  .MainLogo {
+    scale: 0.5;
+    position: absolute;
+    top: -5%;
+    left: 0%;
+  }
 }
 
 .Heiko {
@@ -185,6 +244,13 @@ button:hover, li:hover {
   padding: 20px;
   z-index: 2;
 }
+@media (max-width: 600px) {
+  .Heiko {
+    padding-left: 0;
+    position: absolute;
+    top: 100%;
+  }
+}
 .Heiko > h1 {
   font-size: 34px;
   text-align: left;
@@ -195,6 +261,14 @@ button:hover, li:hover {
   font-family: "Roboto Condensed", sans-serif;
   padding-top: 35px;
 }
+@media (max-width: 600px) {
+  .Heiko > h1 {
+    padding-left: 0;
+    padding-top: 0;
+    text-align: center;
+    width: 85%;
+  }
+}
 .Heiko > p {
   font-size: 16px;
   text-align: left;
@@ -204,6 +278,14 @@ button:hover, li:hover {
   padding-left: 190px;
   width: 275px;
   height: 134px;
+}
+@media (max-width: 600px) {
+  .Heiko > p {
+    padding-top: 0;
+    padding-left: 10px;
+    width: 80%;
+    text-align: center;
+  }
 }
 
 .pic {
@@ -247,18 +329,20 @@ button:hover, li:hover {
   left: 44.5%;
   scale: 1.2;
 }
+@media (max-width: 600px) {
+  .swiper-button-prev-unique {
+    left: 43.5%;
+  }
+}
 
 .swiper-button-next-unique {
   right: 44.5%;
   scale: 1.2;
 }
-
-.black {
-  display: flex;
-  flex-direction: row;
-  background-color: #000000;
-  height: 500px;
-  width: 100%;
+@media (max-width: 600px) {
+  .swiper-button-next-unique {
+    right: 41.5%;
+  }
 }
 
 .button {
@@ -283,6 +367,14 @@ button:hover, li:hover {
   height: 550px;
   width: 100%;
 }
+@media (max-width: 600px) {
+  .black {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-top: 200px;
+  }
+}
 
 .blktext {
   color: white;
@@ -300,16 +392,40 @@ button:hover, li:hover {
   font-size: 32px;
   margin: 0;
 }
+@media (max-width: 600px) {
+  .blktext > h2 {
+    padding-left: 120px;
+    padding-top: 50px;
+    text-align: center;
+    width: 85%;
+  }
+}
 .blktext > h3 {
   font-weight: 700;
   font-size: 22px;
   margin: 0;
+}
+@media (max-width: 600px) {
+  .blktext > h3 {
+    padding-left: 120px;
+    padding-top: 10px;
+    text-align: center;
+    width: 85%;
+  }
 }
 .blktext > p {
   font-size: 16px;
   font-weight: 200;
   width: 427px;
   height: 219px;
+}
+@media (max-width: 600px) {
+  .blktext > p {
+    padding-top: 10px;
+    text-align: center;
+    width: 150%;
+    padding-left: 50px;
+  }
 }
 
 .button {
@@ -327,6 +443,14 @@ button:hover, li:hover {
   gap: 15px;
   align-items: flex-start;
 }
+@media (max-width: 600px) {
+  .buttons {
+    padding-top: 60px;
+    text-align: center;
+    width: 150%;
+    padding-left: 50px;
+  }
+}
 
 .blkpic {
   display: flex;
@@ -334,12 +458,22 @@ button:hover, li:hover {
   align-items: flex-start;
   gap: 15px;
 }
+@media (max-width: 600px) {
+  .blkpic {
+    padding-top: 10px;
+  }
+}
 
 .hus1 img {
   margin-top: 80px;
   padding-left: 0;
   width: 415px;
   height: auto;
+}
+@media (max-width: 600px) {
+  .hus1 img {
+    margin-top: 10px;
+  }
 }
 
 .row {
@@ -358,6 +492,13 @@ button:hover, li:hover {
   background-color: #000000;
   width: 100%;
 }
+@media (max-width: 600px) {
+  .half {
+    padding-top: 395px;
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .red {
   background-color: #B50014;
@@ -367,15 +508,36 @@ button:hover, li:hover {
   text-align: left;
   justify-content: center;
 }
+@media (max-width: 600px) {
+  .red {
+    width: 100%;
+  }
+}
 .red > h2 {
   padding-top: 90px;
   font-weight: 700;
   font-size: 32px;
   padding-left: 33%;
 }
+@media (max-width: 600px) {
+  .red > h2 {
+    padding-right: 0px;
+    position: relative;
+    top: -50px;
+    left: -47px;
+  }
+}
 .red > li {
   padding-left: 33%;
   font-size: 16px;
+}
+@media (max-width: 600px) {
+  .red > li {
+    padding-right: 0px;
+    position: relative;
+    top: -50px;
+    left: -10%;
+  }
 }
 
 .grillbutton {
@@ -385,6 +547,14 @@ button:hover, li:hover {
   border: none;
   width: 147px;
   height: 47px;
+}
+@media (max-width: 600px) {
+  .grillbutton {
+    padding-right: 0px;
+    position: relative;
+    top: -50px;
+    left: -110%;
+  }
 }
 
 .buttonss {
@@ -397,6 +567,12 @@ button:hover, li:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 600px) {
+  .fish {
+    width: 100%;
+    height: 290px;
+  }
 }
 .fish img {
   width: 100%;
@@ -421,12 +597,23 @@ button:hover, li:hover {
   margin-bottom: 0;
   padding-top: 60px;
 }
+@media (max-width: 600px) {
+  .Handwerk > h2 {
+    padding-top: 10px;
+  }
+}
 .Handwerk > h4 {
   font-size: 22px;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   line-height: 26px;
   margin-top: 12px;
+}
+@media (max-width: 600px) {
+  .Handwerk > h4 {
+    padding-top: 10px;
+    text-align: center;
+  }
 }
 .Handwerk > p {
   font-size: 16px;
@@ -437,14 +624,32 @@ button:hover, li:hover {
   padding-left: 0;
   text-align: center;
 }
+@media (max-width: 600px) {
+  .Handwerk > p {
+    padding-top: 7px;
+    width: 100%;
+  }
+}
 .Handwerk > .buttons {
   padding-top: 30px;
   padding-left: 0px;
+}
+@media (max-width: 600px) {
+  .Handwerk > .buttons {
+    padding-top: 18px;
+    justify-content: center;
+  }
 }
 
 .vonal {
   padding-top: 90px;
   padding-bottom: 55px;
+}
+@media (max-width: 600px) {
+  .vonal {
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
 }
 
 .meatpics {
@@ -453,12 +658,39 @@ button:hover, li:hover {
   justify-content: center;
   gap: 15px;
 }
+@media (max-width: 600px) {
+  .meatpics {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .meatpics .first_row, .meatpics .second_row {
+    position: relative;
+    left: 0px;
+    scale: 0.7;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 15px;
+    align-items: center;
+  }
+  .meatpics .second_row {
+    position: relative;
+    top: -12%;
+  }
+}
 
 .spices {
   display: flex;
   flex-direction: row;
   height: 705px;
   width: 100%;
+}
+@media (max-width: 600px) {
+  .spices {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 .spices .spicered {
   flex: 1;
@@ -472,6 +704,13 @@ button:hover, li:hover {
   margin-left: 124px;
   padding-top: 180px;
   text-align: start;
+}
+@media (max-width: 600px) {
+  .spices .spicered > .spicered_h2 {
+    text-align: center;
+    margin-left: 0;
+    padding-top: 15px;
+  }
 }
 .spices .spicered > .spicered_h2 h2 {
   font-size: 32px;
@@ -488,6 +727,13 @@ button:hover, li:hover {
   margin-left: 124px;
   text-align: start;
 }
+@media (max-width: 600px) {
+  .spices .spicered > .spicered_h4 {
+    text-align: center;
+    margin-left: 0;
+    padding-top: 15px;
+  }
+}
 .spices .spicered > .spicered_h4 h4 {
   margin-top: 0px;
 }
@@ -501,12 +747,26 @@ button:hover, li:hover {
   margin-left: 124px;
   text-align: start;
 }
+@media (max-width: 600px) {
+  .spices .spicered > .spicered_body {
+    text-align: center;
+    margin-left: 8px;
+    padding-top: 15px;
+    width: 95%;
+  }
+}
 .spices .spicespic {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+@media (max-width: 600px) {
+  .spices .spicespic {
+    width: 100%;
+    height: 350px;
+  }
 }
 .spices .spicespic img {
   width: 100%;
@@ -561,6 +821,14 @@ button:hover, li:hover {
   background-position: center bottom;
   padding-top: 150px;
 }
+@media (max-width: 600px) {
+  .transp .parallax {
+    background-position: left left;
+    background-size: 100% 420px;
+    background-position-x: -170px;
+    width: 100%;
+  }
+}
 
 .genussnetz {
   display: flex;
@@ -581,11 +849,24 @@ button:hover, li:hover {
   flex-direction: row;
   width: 100%;
 }
+@media (max-width: 600px) {
+  .genussnetz > .container .genuss_row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 .genussnetz > .container .genuss_row > .genussnetz_pic {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 600px) {
+  .genussnetz > .container .genuss_row > .genussnetz_pic {
+    scale: 1.5;
+    padding-bottom: 30px;
+  }
 }
 .genussnetz > .container .genuss_row > .genussnetz_pic img {
   max-width: 100%;
@@ -599,6 +880,11 @@ button:hover, li:hover {
   align-items: center;
   padding-left: 20px;
   gap: 15px;
+}
+@media (max-width: 600px) {
+  .genussnetz > .container .genuss_row > .genussnetz_text {
+    width: 80%;
+  }
 }
 .genussnetz > .container .genuss_row > .genussnetz_text h2 {
   font-size: 32px;
@@ -616,18 +902,46 @@ button:hover, li:hover {
   padding-top: 130px;
   padding-bottom: 0px;
 }
+@media (max-width: 600px) {
+  .genussnetz > .container .genuss_column > .vonal {
+    scale: 3;
+    padding-top: 50px;
+    padding-left: 5px;
+  }
+}
 
 .medals {
   height: 470px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 600px) {
+  .medals > .container {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .medals > .container .medals_row {
-  padding-top: 150px;
+  padding-top: 90px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+@media (max-width: 600px) {
+  .medals > .container .medals_row {
+    display: flex;
+    flex-direction: column;
+    padding-left: 85px;
+  }
+  .medals > .container .medals_row .medal_firstrow, .medals > .container .medals_row .medal_secondrow {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+  }
 }
 .medals > .container .medals_row h2 {
   font-size: 32px;
@@ -641,6 +955,12 @@ button:hover, li:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 600px) {
+  .medals > .container .medals_row .special, .medals > .container .medals_row .genuine, .medals > .container .medals_row .best, .medals > .container .medals_row .quality {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .medals > .container .medals_row .special p, .medals > .container .medals_row .genuine p, .medals > .container .medals_row .best p, .medals > .container .medals_row .quality p {
   font-family: "Roboto", sans-serif;
@@ -658,7 +978,7 @@ button:hover, li:hover {
 }
 .medals > .container .genuss_column > .vonal {
   width: 100%;
-  padding-top: 130px;
+  padding-top: 40px;
   padding-bottom: 0px;
 }
 
@@ -667,12 +987,22 @@ button:hover, li:hover {
   height: 820px;
   padding-top: 130px;
 }
+@media (max-width: 600px) {
+  .cards {
+    padding-bottom: 50px;
+  }
+}
 
 .container .cards_column {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 600px) {
+  .container .cards_column {
+    padding-top: 50px;
+  }
 }
 .container .cards_column .card_button {
   padding-top: 90px;
@@ -686,6 +1016,11 @@ button:hover, li:hover {
   margin-bottom: 20px;
   margin-top: 5px;
   color: #fff;
+}
+@media (max-width: 600px) {
+  .container .cards_column h2 {
+    text-align: center;
+  }
 }
 .container .cards_column p {
   font-family: "Roboto", sans-serif;
@@ -758,6 +1093,12 @@ button:hover, li:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 600px) {
+  .container .swiper-container .swiper-slide .slide2 {
+    width: 420px;
+    height: 100%;
+  }
 }
 .container .swiper-container .swiper-slide .slide2 #grillkurs_icon {
   padding-top: 50px;

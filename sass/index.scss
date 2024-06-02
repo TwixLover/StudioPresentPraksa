@@ -15,6 +15,13 @@ body {
 .container{
     max-width: 1318px;
     margin: 0 auto;
+
+    @media (max-width: 600px) {
+        max-width: 600px;
+    }
+    @media (max-width: 360px) {
+        max-width: 412px;
+    }
 }
   .navbar {
     display: flex;
@@ -68,6 +75,8 @@ body {
             width: 30px;
             height: 20px;
             background-color:$MainColor;
+            position: relative;
+            left: 400%;
 
             &::before, &::after {
                 content: '';
@@ -96,6 +105,7 @@ body {
         display: block;
         top: 115%;
         position: relative;
+        left: 25%;
 
         &.hidden {
             display: none;
@@ -147,8 +157,16 @@ body {
         outline: 1px solid white; 
         position: relative;
         right:5%;
+    
     }
- 
+    @media (max-width: 600px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding-left: 10px;
+        padding-top: 0;
+    }
 
 }
 button:hover, li:hover{
@@ -158,6 +176,28 @@ button:hover, li:hover{
 .opText {
     margin-right: 200px;
     font-size: 16px;
+    @media (max-width: 600px) {
+        display: flex;
+        justify-content: end;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 11.72px;
+        flex-direction: column;
+        max-height: 25px;
+    }
+    img{
+        @media (max-width: 600px) {
+            scale: 0.8;
+            position: absolute;
+            top: 10%;
+            z-index: 500;
+            left: 29%;
+            
+        }
+    
+    }
 }
 
 .download {
@@ -168,17 +208,30 @@ button:hover, li:hover{
 .picture {
     width: 100%;
     position: relative;
+        @media (max-width: 600px) 
+        {
+            width: 100%;
+            height: 250px;
+            
+        }
+    
 }
 
 .MainLogo {
     position: absolute;
     top: 0.2%;
-    left: 19%;
+    left: 15%;
     transform: translateX(-50%);
     z-index: 1;
 
+    @media (max-width: 600px) {
+        
+        scale: 0.5;
+        position: absolute;
+        top: -5%;
+        left: 0%;
 }
-
+}
 
 .Heiko {
     position: absolute;
@@ -188,6 +241,12 @@ button:hover, li:hover{
     background-color: rgba(0, 0, 0, 0.3); 
     padding: 20px;
     z-index: 2; 
+    @media (max-width: 600px) {
+        padding-left: 0;
+        position: absolute;
+        top: 100%;
+        
+    }
 
     &>h1{
         font-size: 34px;
@@ -198,6 +257,12 @@ button:hover, li:hover{
         margin-top: 5px;
         font-family: "Roboto Condensed", sans-serif;
         padding-top: 35px;
+        @media (max-width: 600px) {
+            padding-left: 0;
+            padding-top: 0;
+            text-align: center;
+            width: 85%;
+        }
     }
     &>p{
         font-size: 16px;
@@ -208,8 +273,15 @@ button:hover, li:hover{
         padding-left: 190px;
         width: 275px;
         height: 134px;
+        @media (max-width: 600px) {
+            padding-top: 0;
+            padding-left: 10px;
+            width: 80%;
+            text-align: center;
+        }
     }
-}
+    }
+
 .pic {
     position: relative;
     .swiper-container-unique {
@@ -245,26 +317,30 @@ button:hover, li:hover{
         font-size: 24px;
         cursor: pointer;
         z-index: 3;
+   
       }
     }
-  }
+
   
+  }
+
 
 .swiper-button-prev-unique {
     left: 44.5%;
     scale: 1.2;
+    @media (max-width: 600px) {
+        left: 43.5%;
+        
+    }
 }
 
 .swiper-button-next-unique {
     right: 44.5%;
     scale: 1.2;
-}
-.black {
-    display: flex;
-    flex-direction: row;
-    background-color: $secondColor;
-    height: 500px;
-    width: 100%;
+    @media (max-width: 600px) {
+        right: 41.5%;
+        
+    }
 }
 
 .button {
@@ -287,6 +363,12 @@ button:hover, li:hover{
     background-color: $secondColor;
     height: 550px;
     width: 100%;
+    @media (max-width:600px) {
+        display: flex;
+        position:relative;
+        flex-direction: column;
+        padding-top: 200px;
+    }
 }
 
 .blktext {
@@ -304,18 +386,36 @@ button:hover, li:hover{
         font-weight: 700;
         font-size: 32px;
         margin: 0;
+        @media (max-width: 600px) {
+            padding-left: 120px;
+            padding-top: 50px;
+            text-align: center;
+            width: 85%;
+        }
     }
 
     &>h3{
         font-weight: 700;
         font-size: 22px;
         margin: 0;
+        @media (max-width: 600px) {
+            padding-left: 120px;
+            padding-top: 10px;
+            text-align: center;
+            width: 85%;
+        }
     }
     &>p{
         font-size: 16px;
         font-weight: 200;
         width: 427px;
         height: 219px;
+        @media (max-width: 600px) {
+            padding-top: 10px;
+            text-align: center;
+            width: 150%;
+            padding-left: 50px;
+        }
     }
 }
 
@@ -333,6 +433,12 @@ button:hover, li:hover{
     display: flex;
     gap: 15px;
     align-items: flex-start;
+    @media (max-width: 600px) {
+        padding-top: 60px;
+        text-align: center;
+        width: 150%;
+        padding-left: 50px;
+    }
 }
 
 .blkpic {
@@ -340,6 +446,9 @@ button:hover, li:hover{
     flex-direction: column;
     align-items: flex-start;  
     gap: 15px;
+    @media (max-width: 600px) {
+        padding-top: 10px;
+    }
 }
 
 .hus1 img {
@@ -347,6 +456,9 @@ button:hover, li:hover{
     padding-left: 0;  
     width: calc(3 * 135px + 2 * 5px);
     height: auto;
+    @media (max-width: 600px) {
+        margin-top: 10px;
+    }
 }
 
 .row {
@@ -364,6 +476,11 @@ button:hover, li:hover{
     flex-direction: row;
     background-color: $secondColor;
     width: 100%;
+    @media (max-width: 600px) {
+        padding-top: 395px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .red{
@@ -373,17 +490,35 @@ button:hover, li:hover{
     font-size: large;
     text-align: left;
     justify-content: center;
+    @media (max-width:600px) {
+        width: 100%;
+        
+    }
     
     &>h2{
         padding-top: 90px;
         font-weight: 700;
         font-size: 32px;
         padding-left: 33%;
+        @media (max-width:600px) {
+            padding-right: 0px;
+        position: relative;
+        top: -50px;
+        left: -47px;
+            
+        }
     }
 
     &>li{
         padding-left: 33%;
     font-size: 16px;
+    @media (max-width:600px) {
+        padding-right: 0px;
+        position: relative;
+        top: -50px;
+        left: -10%;
+        
+    }
     }
 }
 
@@ -394,6 +529,13 @@ button:hover, li:hover{
     border: none; 
     width: 147px;
     height: 47px;
+    @media (max-width:600px) {
+        padding-right: 0px;
+        position: relative;
+        top: -50px;
+        left: -110%;
+        
+    }
 }
 .buttonss{
     padding-top: 30px;
@@ -405,6 +547,10 @@ button:hover, li:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width:600px) {
+        width: 100%;
+        height: 290px;
+    }
 
     img{
         width: 100%;
@@ -429,6 +575,10 @@ button:hover, li:hover{
         line-height: 26px;
         margin-bottom: 0;
         padding-top: 60px;
+        @media (max-width:600px) {
+            padding-top: 10px;
+        }
+    
     }
     &>h4{
     font-size: 22px;
@@ -436,6 +586,10 @@ button:hover, li:hover{
     font-family: "Roboto", sans-serif; 
     line-height: 26px;
     margin-top: 12px;
+    @media (max-width:600px) {
+        padding-top: 10px;
+        text-align: center;
+    }
     }
     &>p{
     font-size: 16px;
@@ -445,17 +599,29 @@ button:hover, li:hover{
     width: 652px;
     padding-left: 0;
     text-align: center;
+    @media (max-width:600px) {
+        padding-top: 7px;
+        width: 100%;
+    }
     }
 
     &>.buttons{
     padding-top: 30px;
     padding-left:0px;
+    @media (max-width:600px) {
+        padding-top: 18px;
+        justify-content: center;
+    }
     }
 }
 
 .vonal{
     padding-top: 90px;
     padding-bottom:55px;
+    @media (max-width:600px) {
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
 }
 .meatpics{
     
@@ -463,13 +629,36 @@ button:hover, li:hover{
     flex-direction: row;
     justify-content: center;
     gap: 15px;
+    @media (max-width:600px) {
+        display: flex;
+        flex-direction: column;
+        gap:0px;
+       .first_row, .second_row{
+        position: relative;
+        left: 0px;
+        scale: 0.7;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap:15px;
+        align-items: center;
+       }
+       .second_row{
+        position: relative;
+        top:-12%
+       }
+    }
 }
 .spices {
     display: flex;
     flex-direction: row;
     height: 705px;
     width: 100%;
+    @media (max-width:600px) {
 
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .spicered {
         flex: 1;
         background-color: $MainColor; 
@@ -481,6 +670,11 @@ button:hover, li:hover{
                margin-left: 124px;
                 padding-top: 180px;
                 text-align: start;
+                 @media (max-width:600px) {
+                text-align: center;
+                margin-left: 0;
+                padding-top: 15px;
+            }
                 h2{
                     font-size: 32px;
                     font-weight: 700;
@@ -497,6 +691,11 @@ button:hover, li:hover{
             line-height: 20px;
             margin-left: 124px;
             text-align: start;
+            @media (max-width:600px) {
+                text-align: center;
+                margin-left: 0;
+                padding-top: 15px;
+            }
             h4{
                 margin-top:0px;
 
@@ -511,6 +710,12 @@ button:hover, li:hover{
             padding-left: 0;
             margin-left: 124px;
             text-align: start;
+            @media (max-width:600px) {
+                text-align: center;
+                margin-left: 8px;
+                padding-top: 15px;
+                width: 95%;
+            }
 
         }
     }
@@ -520,9 +725,14 @@ button:hover, li:hover{
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        @media (max-width:600px) {
+            width: 100%;
+            height: 350px;
+        }
         img {
             width: 100%;
             height: 100%;
+         
         
         }
     }
@@ -577,6 +787,13 @@ button:hover, li:hover{
         background-repeat: no-repeat;
         background-position: center bottom;
         padding-top: 150px;
+        @media (max-width:600px) {
+            background-position: left left;
+            background-size: 100% 420px;
+            background-position-x: -170px;
+            width: 100%;
+            
+        }
         
       }
   }
@@ -598,12 +815,23 @@ button:hover, li:hover{
             display: flex;
             flex-direction: row;
             width: 100%;
+            @media (max-width: 600px) {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                
+            }
             &>{
                 .genussnetz_pic {
                     width: 50%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    @media (max-width: 600px) {
+                        scale: 1.5;
+                        padding-bottom: 30px;
+                    }
+                    
             
                     img {
                         max-width: 100%;
@@ -620,6 +848,10 @@ button:hover, li:hover{
                     align-items: center;
                     padding-left: 20px;
                     gap: 15px;
+                    @media (max-width:600px) {
+                        width: 80%;
+                        
+                    }
             
                     h2 {
                         font-size: 32px;
@@ -638,6 +870,12 @@ button:hover, li:hover{
                 width: 100%;
                 padding-top: 130px;
                 padding-bottom: 0px;
+                @media (max-width:600px) {
+                  scale: 3;
+                  padding-top: 50px;
+                  padding-left: 5px;
+                    
+                }
 
             }
         }
@@ -646,15 +884,36 @@ button:hover, li:hover{
 .medals {
     height: 470px;
     width: 100%;
-
+    display: flex;
+    flex-direction: row;
+   
     & > .container {
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: row;
+            
+        }
+
         .medals_row {
-            padding-top: 150px;
+            padding-top: 90px;
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
+            @media (max-width: 600px) {
+                display: flex;
+                flex-direction: column;
+                padding-left: 85px;
+
+                .medal_firstrow, .medal_secondrow{
+                    display: flex;
+                    flex-direction: row;
+                    gap:20px;
+                    text-align: center;
+                }
+                
+            }
 
             h2 {
                 font-size: 32px;
@@ -669,7 +928,11 @@ button:hover, li:hover{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-
+                @media (max-width: 600px) {
+                    display: flex;
+                    flex-direction: column;
+                    
+                }
                 p {
                     font-family: "Roboto", sans-serif;
                     font-size: 16px;
@@ -690,7 +953,7 @@ button:hover, li:hover{
             width: 100%;
             &>.vonal{
                 width: 100%;
-                padding-top: 130px;
+                padding-top: 40px;
                 padding-bottom: 0px;
 
             }
@@ -703,6 +966,10 @@ button:hover, li:hover{
     width: 100%;
     height: 820px;
     padding-top: 130px;
+    @media (max-width: 600px) {
+        padding-bottom: 50px;
+        
+    }
 }
 
 .container {
@@ -711,6 +978,9 @@ button:hover, li:hover{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        @media (max-width:600px) {
+            padding-top: 50px;
+        }
 
         .card_button {
             padding-top: 90px;
@@ -725,6 +995,9 @@ button:hover, li:hover{
             margin-bottom: 20px;
             margin-top: 5px;
             color: #fff;
+            @media (max-width:600px) {
+                text-align: center;
+            }
         }
 
         p {
@@ -807,6 +1080,12 @@ button:hover, li:hover{
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                @media (max-width: 600px) {
+                    width: 420px;
+                    height: 100%;
+                }
+                
+                
 
                 #grillkurs_icon {
                     padding-top: 50px;
@@ -861,6 +1140,7 @@ button:hover, li:hover{
             height: 414px;
             width: 400px;
             z-index: 2; 
+           
         }
 
         .lnr-arrow-left-circle, .lnr-arrow-right-circle {
@@ -890,6 +1170,7 @@ button:hover, li:hover{
     background-color: $MainColor;
     position: relative;
     height: 174px;
+   
 
     &>.container {
         padding-bottom: 24px; 
@@ -900,6 +1181,7 @@ button:hover, li:hover{
           
           align-items: center;
           justify-content: space-between;
+          
 
           .socialmedia{
             display: flex;
